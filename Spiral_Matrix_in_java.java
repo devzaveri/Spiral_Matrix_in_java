@@ -2,67 +2,61 @@ import java.util.*;
 
 public class Spiral_Matrix_in_java {
 
-    public static void matrixQue(int[][] matrix , int n , int m){
-       
-        //T = top , B = Bottom , L = left , R = right , dir = direction
-        int T = 0;
-        int B = n - 1;
-        int L = 0;
-        int R = m - 1;
-        int dir = 0;
-
-        while(T <= B && L <= R){
-            if(dir == 0){
-            for(int i = L ; i <= R ; i++){
-                System.out.print(matrix[T][i] + " ");
-            }
-            T++;
-            dir = 1;
-        }
-        else if(dir == 1){
-            for (int i = T; i <= B; i++) {
-                System.out.print(matrix[i][R] + " ");
-                
-            }
-            R--;
-            dir = 2;
-        }
-        else if(dir == 2){
-            for (int i = R; i >= L; i--) {
-                System.out.print(matrix[B][i] + " ");
-                
-            }
-            B--;
-            dir = 3;
-        }
-        else{
-            for (int i = B; i >= T; i--) {
-                System.out.print(matrix[i][L] + " ");
-                
-            }
-            L++;
-            dir = 0;
-        }
-        }
-    }
-
-    public static int print(int n , int m , int[][] matrix){
-        return matrix[n - 1][m - 1];
-    }
-    public static void main(String[] args) {
+    public static int[] matrixQue(int n, int m) {
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int m = in.nextInt();
-
         int[][] matrix = new int[n][m];
-
+        int[] ans = new int[n * m];
+        int count = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 matrix[i][j] = in.nextInt();
             }
         }
+        int T = 0;
+        int B = n - 1;
+        int L = 0;
+        int R = m - 1;
+        int dir = 0;
         
-        matrixQue(matrix, n, m);
-        int ans = print(n, m, matrix);
+        while (T <= B && L <= R) {
+            if (dir == 0) {
+                for (int i = L; i <= R; i++) {
+                    ans[count++] = matrix[T][i];
+                }
+                T++;
+                dir = 1;
+            } else if (dir == 1) {
+                for (int i = T; i <= B; i++) {
+                    ans[count++] = matrix[i][R];
+                }
+                R--;
+                dir = 2;
+            } else if (dir == 2) {
+                for (int i = R; i >= L; i--) {
+                    ans[count++] = matrix[B][i];
+                }
+                B--;
+                dir = 3;
+            } else {
+                for (int i = B; i >= T; i--) {
+                    ans[count++] = matrix[i][L];
+                }
+                L++;
+            }
+        }
+        return ans;
+    }
+    public static void printMatrix(int[] matrix, int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(matrix[i] + " ");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int m = in.nextInt();
+        int[] ans = matrixQue(n, m);
+        printMatrix(ans, n * m);
+    
     }
 }
