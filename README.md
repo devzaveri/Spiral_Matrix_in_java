@@ -1,6 +1,7 @@
-<b>Spiral_Matrix_in_java--2<b> is used to get the output in a 2d array 
+<b>Spiral_Matrix_in_java--2<b> is used to get the output in a 2d array for n * n matrix
   <br>
   <br>
+  <b>nMulM<b> is used to get the output in a 2d array for n * m matrix
 
 
   <br><br>
