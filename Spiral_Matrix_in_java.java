@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Spiral_Matrix_in_java {
 
-    public static int[] matrixQue(int n, int m) {
+    public static int[] CreateSpiralMatrix(int n, int m) {
         Scanner in = new Scanner(System.in);
         int[][] matrix = new int[n][m];
         int[] ans = new int[n * m];
@@ -46,7 +46,7 @@ public class Spiral_Matrix_in_java {
         }
         return ans;
     }
-    public static void printMatrix(int[] matrix, int n) {
+    public static void PrintMatrix(int[] matrix, int n) {
         for (int i = 0; i < n; i++) {
             System.out.print(matrix[i] + " ");
         }
@@ -55,8 +55,8 @@ public class Spiral_Matrix_in_java {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int m = in.nextInt();
-        int[] ans = matrixQue(n, m);
-        printMatrix(ans, n * m);
+        int[] ans = CreateSpiralMatrix(n, m);
+        PrintMatrix(ans, n * m);
     
     }
 }
