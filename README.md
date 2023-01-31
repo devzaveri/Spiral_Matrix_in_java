@@ -1,7 +1,7 @@
 <b>Spiral_Matrix_in_java<b> is used to get the output in a single array
 <br>
   <br>
-<b>Spiral_Matrix_in_java--2<b> is used to get the output in a 2d array 
+<b>Spiral_Matrix_in_java--2<b> is used to get the output in a 2d array this is the main code
   <br><br><br>
 
 Time complexity is O(n * m). n is the number of the rows and m is the number of the collums. the code travels all the element.
