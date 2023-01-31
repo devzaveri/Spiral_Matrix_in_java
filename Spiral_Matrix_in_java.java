@@ -1,18 +1,9 @@
 import java.util.*;
 
 public class Spiral_Matrix_in_java {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int m = in.nextInt();
 
-        int[][] matrix = new int[n][m];
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                matrix[i][j] = in.nextInt();
-            }
-        }
+    public static void matrixQue(int[][] matrix , int n , int m){
+       
 
         int T = 0;
         int B = n - 1;
@@ -53,6 +44,20 @@ public class Spiral_Matrix_in_java {
             dir = 0;
         }
         }
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int m = in.nextInt();
+
+        int[][] matrix = new int[n][m];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                matrix[i][j] = in.nextInt();
+            }
+        }
         
+        matrixQue(matrix, n, m);
     }
 }
