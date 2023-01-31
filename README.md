@@ -1,6 +1,16 @@
+<b>Spiral_Matrix_in_java<b> is used to get the output in a single array
+<br>
+  <br>
+<b>Spiral_Matrix_in_java--2<b> is used to get the output in a 2d array
+  <br><br><br>
+
 Time complexity is O(n * m). n is the number of the rows and m is the number of the collums. the code travels all the element.
 <br>
 The Space complexity is O(1). because there is one single wile loop.
+
+<br>
+<br>
+
 
 # Spiral_Matrix_in_java
 ![image](https://user-images.githubusercontent.com/84063889/215672952-9bdd9c55-1422-4819-ac6c-749e1cb9d431.png)
