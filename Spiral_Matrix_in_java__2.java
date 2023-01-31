@@ -38,10 +38,10 @@ public class Spiral_Matrix_in_java__2 {
     }
 
 
-    public static void PrintMatrix(int[][] matrix , int n , int m) {
-      for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-          System.out.print(matrix[i][j] + " ");
+    public static void PrintMatrix(int[][] matrix) {
+      for (int i = 0; i < matrix.length; i++) {
+        for (int j = 0; j < matrix.length; j++) {
+          System.out.print(matrix[i][j] + "\t");
         }
         System.out.println();
       }
@@ -55,6 +55,6 @@ public class Spiral_Matrix_in_java__2 {
         
 
         int[][] ans = CreateSpiralMatrix(n);
-        PrintMatrix(ans, n, n);
+        PrintMatrix(ans);
     }
   }
