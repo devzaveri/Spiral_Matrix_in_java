@@ -1,12 +1,12 @@
 import java.util.*;
-public class Spiral_Matrix_in_java2 {
+public class Spiral_Matrix_in_java__2 {
     
-    public static int[][] CreateSpiralMatrix(int n, int m) {
+    public static int[][] CreateSpiralMatrix(int n) {
       Scanner in = new Scanner(System.in);
-      int[][] matrix = new int[n][m];
+      int[][] matrix = new int[n][n];
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+            for (int j = 0; j < n; j++) {
                 matrix[i][j] = in.nextInt();
             }
         }
@@ -14,7 +14,7 @@ public class Spiral_Matrix_in_java2 {
       int T = 0;
       int B = n - 1;
       int L = 0;
-      int R = m - 1;
+      int R = n - 1;
       
       while (T <= B && L <= R) {
         for (int i = L; i <= R; i++) {
@@ -40,7 +40,7 @@ public class Spiral_Matrix_in_java2 {
 
     public static void PrintMatrix(int[][] matrix , int n , int m) {
       for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+        for (int j = 0; j < n; j++) {
           System.out.print(matrix[i][j] + " ");
         }
         System.out.println();
@@ -51,10 +51,10 @@ public class Spiral_Matrix_in_java2 {
     public static void main(String[] args) {
       Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        int m = in.nextInt();
+        
         
 
-        int[][] ans = CreateSpiralMatrix(n, m);
-        PrintMatrix(ans, n, m);;
+        int[][] ans = CreateSpiralMatrix(n);
+        PrintMatrix(ans, n, n);
     }
   }
