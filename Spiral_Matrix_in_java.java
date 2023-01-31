@@ -4,15 +4,12 @@ public class Spiral_Matrix_in_java {
 
     public static void matrixQue(int[][] matrix , int n , int m){
        
-        //T = top , B = Bottom , L = left , R = right
-        //dir = direction.
-
+        //T = top , B = Bottom , L = left
         int T = 0;
         int B = n - 1;
         int L = 0;
         int R = m - 1;
         int dir = 0;
-
 
         while(T <= B && L <= R){
             if(dir == 0){
@@ -48,6 +45,10 @@ public class Spiral_Matrix_in_java {
         }
         }
     }
+
+    public static int print(int n , int m , int[][] matrix){
+        return matrix[n - 1][m - 1];
+    }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -62,5 +63,6 @@ public class Spiral_Matrix_in_java {
         }
         
         matrixQue(matrix, n, m);
+        int ans = print(n, m, matrix);
     }
 }
