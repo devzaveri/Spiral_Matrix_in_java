@@ -4,12 +4,15 @@ public class Spiral_Matrix_in_java {
 
     public static void matrixQue(int[][] matrix , int n , int m){
        
+        //T = top , B = Bottom , L = left , R = right
+        //dir = direction.
 
         int T = 0;
         int B = n - 1;
         int L = 0;
         int R = m - 1;
         int dir = 0;
+
 
         while(T <= B && L <= R){
             if(dir == 0){
